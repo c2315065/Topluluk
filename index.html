@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
   <meta charset="UTF-8">
@@ -25,13 +25,13 @@
       width: 100%;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 
     .header-left {
       display: flex;
       align-items: center;
-      gap: 5px;
+      gap: 15px;
       flex: 1;
       min-width: 250px;
       justify-content: center;
@@ -119,6 +119,12 @@
       background-color: #e5920d;
     }
 
+    .burger {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
     .hero {
       background: url('https://images.unsplash.com/photo-1537432376769-00a5b7c08547?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
       height: 100vh;
@@ -128,6 +134,16 @@
       text-align: center;
       color: white;
       padding-top: 100px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
 
     .hero h2 {
@@ -144,6 +160,13 @@
       text-align: center;
     }
 
+    footer {
+      background-color: #0d1b2a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -156,8 +179,17 @@
       }
 
       nav ul {
+        display: none;
         flex-direction: column;
         gap: 10px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .burger {
+        display: block;
       }
 
       .header-title {
@@ -182,8 +214,11 @@
       </div>
       <div class="header-title">Topluluk İsmi</div>
     </div>
+    <div class="burger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
     <nav>
-      <ul>
+      <ul id="nav-menu">
         <li><a href="#">Hakkında</a></li>
         <li>
           <a href="#">Topluluk</a>
@@ -214,6 +249,16 @@
     <h2>Neden Bize Katılmalısın?</h2>
     <p>IEEE'nin ilham veren yapısını benimseyen, sade ama güçlü bir topluluk. Gerçek projeler, gerçek ekipler, gerçek deneyimler. Birlikte üret, öğren ve paylaş!</p>
   </section>
+
+  <footer>
+    <p>© 2025 Topluluk İsmi. Tüm Hakları Saklıdır.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-menu').classList.toggle('show');
+    }
+  </script>
 </body>
 
 </html>
