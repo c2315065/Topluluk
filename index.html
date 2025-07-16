@@ -16,8 +16,9 @@
     header {
       background-color: #0d1b2a;
       color: white;
-      padding: 20px;
+      padding: 10px 20px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       position: fixed;
@@ -30,7 +31,10 @@
     .header-left {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 15px;
+      flex: 1;
+      min-width: 250px;
+      justify-content: center;
     }
 
     .header-icons a {
@@ -50,12 +54,20 @@
       text-align: center;
     }
 
+    nav {
+      flex: 2;
+      min-width: 250px;
+      text-align: center;
+    }
+
     nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex;
-      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
     }
 
     nav ul li {
@@ -80,14 +92,17 @@
       top: 100%;
       left: 0;
       padding: 10px;
+      z-index: 1001;
     }
 
     nav ul li:hover ul {
       display: block;
     }
 
-    nav ul li ul li {
-      margin: 0;
+    .join-button {
+      min-width: 150px;
+      text-align: center;
+      margin: 10px 0;
     }
 
     .join-button a {
@@ -129,16 +144,27 @@
       text-align: center;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       header {
         flex-direction: column;
+        align-items: center;
       }
-      nav ul {
+
+      .header-left {
+        justify-content: center;
         flex-direction: column;
       }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
       .header-title {
         font-size: 1.5rem;
+        margin: 10px 0;
       }
+
       .hero h2 {
         font-size: 2rem;
       }
