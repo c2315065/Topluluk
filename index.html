@@ -1,53 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Topluluk Sayfası</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <title>Topluluk İsmi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
     }
+
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: #f5f5f5;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .social-icons a {
-      margin-right: 15px;
-      color: #333;
-      text-decoration: none;
-      font-size: 20px;
-    }
-    .social-icons a:hover {
-      color: #007bff;
-    }
-    .join-button {
-      padding: 8px 16px;
-      background-color: #007bff;
+      background-color: #0d1b2a;
       color: white;
-      border: none;
-      border-radius: 4px;
-      text-decoration: none;
-      font-size: 16px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .join-button:hover {
-      background-color: #0056b3;
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .social-icons a, .join-button a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin: 0 8px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover, .join-button a:hover {
+      color: #fca311;
+    }
+
+    .join-button a {
+      background-color: #fca311;
+      color: #0d1b2a;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+      }
+      .header-content {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
+
 <body>
   <header>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <div class="header-content">
+      <h1>Topluluk İsmi</h1>
+      <div class="social-icons">
+        <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <div class="join-button">
+        <a href="https://linktr.ee/">Üye Ol</a>
+      </div>
     </div>
-    <a class="join-button" href="https://wa.me/" target="_blank">Üye Ol</a>
   </header>
 </body>
+
 </html>
