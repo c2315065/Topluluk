@@ -18,7 +18,7 @@
       color: white;
       padding: 20px;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       position: fixed;
       width: 100%;
@@ -27,27 +27,27 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
 
-    .header-content {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    h1 {
-      margin: 0;
+    .header-title {
       font-size: 2rem;
       font-weight: bold;
+      text-align: center;
+      flex: 1;
     }
 
-    .social-icons a, .join-button a {
+    .header-icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .header-icons a {
       color: white;
       text-decoration: none;
-      font-size: 1.2rem;
-      margin: 0 8px;
+      font-size: 1.5rem;
       transition: color 0.3s ease;
     }
 
-    .social-icons a:hover, .join-button a:hover {
+    .header-icons a:hover {
       color: #fca311;
     }
 
@@ -57,7 +57,12 @@
       padding: 8px 12px;
       border-radius: 5px;
       font-weight: bold;
-      margin-left: 10px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .join-button a:hover {
+      background-color: #e5920d;
     }
 
     .hero {
@@ -89,9 +94,11 @@
       header {
         flex-direction: column;
       }
-      .header-content {
-        flex-direction: column;
+
+      .header-title {
+        font-size: 1.5rem;
       }
+
       .hero h2 {
         font-size: 2rem;
       }
@@ -101,16 +108,14 @@
 
 <body>
   <header>
-    <div class="header-content">
-      <h1>Topluluk İsmi</h1>
-      <div class="social-icons">
-        <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      </div>
-      <div class="join-button">
-        <a href="https://linktr.ee/">Üye Ol</a>
-      </div>
+    <div class="header-icons">
+      <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="header-title">Topluluk İsmi</div>
+    <div class="join-button">
+      <a href="https://linktr.ee/">Üye Ol</a>
     </div>
   </header>
 
@@ -127,7 +132,6 @@
     <h2>Neden Bize Katılmalısın?</h2>
     <p>IEEE'nin ilham veren yapısını benimseyen, sade ama güçlü bir topluluk. Gerçek projeler, gerçek ekipler, gerçek deneyimler. Birlikte üret, öğren ve paylaş!</p>
   </section>
-
 </body>
 
 </html>
