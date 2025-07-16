@@ -4,12 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Topluluk İsmi</title>
+  <title>Topluluk İsmi | Geleceği Birlikte Tasarla</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
     }
 
     header {
@@ -19,6 +20,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
 
     .header-content {
@@ -30,6 +36,7 @@
     h1 {
       margin: 0;
       font-size: 2rem;
+      font-weight: bold;
     }
 
     .social-icons a, .join-button a {
@@ -53,12 +60,40 @@
       margin-left: 10px;
     }
 
+    .hero {
+      background: url('https://images.unsplash.com/photo-1537432376769-00a5b7c08547?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding-top: 100px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
     @media (max-width: 600px) {
       header {
         flex-direction: column;
       }
       .header-content {
         flex-direction: column;
+      }
+      .hero h2 {
+        font-size: 2rem;
       }
     }
   </style>
@@ -78,6 +113,21 @@
       </div>
     </div>
   </header>
+
+  <div class="hero">
+    <h2>Geleceğin Mühendisleri, Birlikte Daha Güçlü</h2>
+  </div>
+
+  <section>
+    <h2>Biz Kimiz?</h2>
+    <p>Alanında istekli öğrencilerden oluşan bir mühendislik topluluğuyuz. Yenilik, iş birliği ve sürekli gelişim için buradayız. Etkinliklerimizle, projelerimizle ve profesyonel bağlantılarımızla sana destek olmak için buradayız.</p>
+  </section>
+
+  <section>
+    <h2>Neden Bize Katılmalısın?</h2>
+    <p>IEEE'nin ilham veren yapısını benimseyen, sade ama güçlü bir topluluk. Gerçek projeler, gerçek ekipler, gerçek deneyimler. Birlikte üret, öğren ve paylaş!</p>
+  </section>
+
 </body>
 
 </html>
